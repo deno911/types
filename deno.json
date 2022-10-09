@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "deno.ns",
+      "deno.window",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
+  },
+  "lint": {
+    "files": {
+      "exclude": [
+        ".{devcontainer,vscode,github}",
+        "version.ts",
+        "*.spec.ts",
+        "./test/*"
+      ]
+    },
+    "rules": {
+      "exclude": [
+        "ban-types",
+        "no-explicit-any",
+        "no-ts-comment"
+      ]
+    }
+  },
+  "fmt": {
+    "files": {
+      "exclude": [
+        ".{devcontainer,vscode,github}",
+        "README.md"
+      ]
+    }
+  }
+}

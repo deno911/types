@@ -1,0 +1,9 @@
+deno-cli
+*.log
+*.env*
+!.env.example
+!.env.vault
+!.env.project
+.*.log
+node_modules
+.DS_Store

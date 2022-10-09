@@ -1,0 +1,28 @@
+{
+  "$schema": "https://x.nest.land/eggs@0.3.10/src/schema.json",
+  "name": "types",
+  "version": "0.0.1",
+  "description": "Collection of TypeScript utilities and interfaces for Deno.",
+  "homepage": "https://github.com/deno911/typedefs",
+  "repository": "https://github.com/deno911/typedefs",
+  "releaseType": "patch",
+  "bump": "patch",
+  "entry": "./mod.ts",
+  "check": true,
+  "checkAll": true,
+  "checkFormat": "deno fmt",
+  "checkTests": "deno test --unstable --no-check -A",
+  "checkInstallation": true,
+  "unstable": true,
+  "unlisted": false,
+  "files": [
+    "./**/*.{ts,tsx,js,jsx,mjs,mts,json,jsonc}",
+    "./*.{ts,tsx,js,jsx,mjs,json,jsonc}",
+    "./{LICENSE,README.md}"
+  ],
+  "ignore": [
+    "./.{devcontainer,github,vscode,git}/**",
+    "*.{test,tests,spec}.*",
+    "*_{test,tests,spec}.*"
+  ]
+}
