@@ -14,4 +14,7 @@ RUN sudo apt-get -y update \
     && sudo apt-get -y install --no-install-recommends gcc git-extras \
     && sudo apt-get -y upgrade && sudo rm -rf /var/lib/apt/lists/*
 
-RUN echo 'PATH="$HOMEBREW_PREFIX/bin:$PATH";eval "$(brew shellenv 2>/dev/null)";if command -v starship &>/dev/null || brew install starship 2>/dev/null; then eval "$(starship init bash)"; fi;' >> /home/${USER:-vscode}/.bashrc
+RUN echo '[[ ":$PATH:" == *":$HOMEBREW_PREFIX:"* ]] || export PATH="$HOMEBREW_PREFIX/bin:$PATH"; eval "$(brew shellenv)"; { command -v starship &>/dev/null || brew install starship &>/dev/null; } && eval "$(starship init bash)";' >> /home/${USER:-vscode}/.bashrc
+
+RUN sudo mkdir -p /etc/bash_completion.d \
+    && deno completions bash > /etc/bash_completion.d/deno.bash

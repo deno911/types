@@ -12,8 +12,16 @@
     "ghcr.io/devcontainers-contrib/features/act:1": {},
     "ghcr.io/devcontainers-contrib/features/actionlint:1": {}
   },
+  "build": {},
+  "updateRemoteUserUID": true,
   // settings for the vscode editor
   "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "deno.json"
+      ]
+    },
     "vscode": {
       "settings": {
         "deno.enable": true,
@@ -37,13 +45,12 @@
         "denoland.vscode-deno",
         "editorconfig.editorconfig",
         "vsls-contrib.gistfs",
-        "redhat.vscode-yaml",
+        "redhat.vscode-yamld",
         "antfu.browse-lite",
         "bierner.markdown-preview-github-styles",
         "mutantdino.resourcemonitor"
       ]
     }
   },
-  "postCreateCommand": "if command -v deno &>/dev/null; then\ndeno upgrade --canary;\ndeno completions bash > /etc/bash_completion.d/deno.bash; fi;",
-  "postAttachCommand": ". /home/vscode/.bashrc"
+  "updateContentCommand": "sudo deno upgrade --canary --force 2>&1"
 }
