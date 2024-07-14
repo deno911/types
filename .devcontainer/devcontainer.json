@@ -45,7 +45,7 @@
         "denoland.vscode-deno",
         "editorconfig.editorconfig",
         "vsls-contrib.gistfs",
-        "redhat.vscode-yamld",
+        "redhat.vscode-yaml",
         "antfu.browse-lite",
         "bierner.markdown-preview-github-styles",
         "mutantdino.resourcemonitor"
